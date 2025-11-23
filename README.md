@@ -256,11 +256,9 @@ For questions or collaboration inquiries:
 ---
 
 ## 🔗 Related Links
-
-- [QIRT-ELISA Technology Paper (Advanced Science)](https://doi.org/10.1002/advs.202412185)
-- [NeurIPS 2025 TS4H Workshop](https://timeseries4health.github.io/)
-- [Poudineh Lab](https://uwaterloo.ca/poudineh-lab/)
+[QIRT-ELISA Technology Paper (Advanced Science)](https://doi.org/10.1002/advs.202412185)
+[NeurIPS 2025 TS4H Workshop](https://timeseries4health.github.io/)
 
 ---
 
-**Last Updated**: November 2025
+**Last Updated**: November 23, 2025
