@@ -10,7 +10,7 @@ Code and data accompanying our paper accepted at **NeurIPS 2025 Workshop: Learni
 
 ---
 
-## 📖 Overview
+## Overview
 
 This repository contains the complete analysis pipeline for classifying metabolic phenotypes (healthy, pre-diabetic, and type 2 diabetic) using high-resolution QIRT-ELISA hormone measurements.
 
@@ -19,44 +19,17 @@ This repository contains the complete analysis pipeline for classifying metaboli
 - Glucagon  
 - C-peptide
 
-at **2.5-minute resolution** (6-fold improvement over conventional ELISA's 15-minute intervals).
+at **1-minute resolution** (15-fold improvement over conventional ELISA's 15-minute intervals).
 
 ### Key Features
 
-- **184 physiologically-informed features** extracted from hormone time-series
+- **184 physiologically-informed features** extracted from hormone time-series data
 - **Three-stage feature selection** pipeline (variance → correlation → F-test)
 - **Machine learning classification** (Logistic Regression, SVM, Random Forest, KNN)
 - **89% classification accuracy** with Leave-One-Out Cross-Validation
 - **Comprehensive documentation** with all metric definitions
 
----
-
-## 🗂️ Repository Structure
-
-```
-qirt-elisa-fed-state-analysis/
-├── README.md                          # This file
-├── LICENSE                            # MIT License
-├── requirements.txt                   # Python dependencies
-├── .gitignore                        # Git ignore rules
-├── data/
-│   ├── README.md                     # Data documentation
-│   ├── fed_state_raw.csv            # Raw experimental data (n=9 animals)
-│   ├── comprehensive_metrics.csv     # Extracted 184 features
-│   └── feature_dictionary.md         # Complete feature descriptions
-├── src/
-│   ├── feature_extraction.py         # Main feature extraction class
-│   └── example_usage.py              # Usage example script
-├── docs/
-│   ├── methodology.md                # Detailed methodology
-│   └── feature_categories.md         # Feature categorization
-└── paper/
-    └── neurips2025_ts4h_paper.pdf    # Published paper
-```
-
----
-
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -90,7 +63,7 @@ analyzer.export_metrics_to_csv('results/metrics.csv')
 
 ---
 
-## 📊 Data Format
+## Data Format
 
 ### Input Data Format (Long Format CSV)
 
@@ -130,7 +103,7 @@ See [`data/feature_dictionary.md`](data/feature_dictionary.md) for complete desc
 
 ---
 
-## 🔬 Methodology
+## Methodology
 
 ### Three-Stage Feature Selection
 
@@ -157,7 +130,7 @@ See [`data/feature_dictionary.md`](data/feature_dictionary.md) for complete desc
 
 ---
 
-## 📈 Key Results
+## Key Results
 
 ### Top Discriminative Features
 
@@ -182,7 +155,7 @@ See [`data/feature_dictionary.md`](data/feature_dictionary.md) for complete desc
 
 ---
 
-## 📚 Citation
+## Citation
 
 If you use this code or data, please cite our NeurIPS 2025 workshop paper:
 
@@ -210,7 +183,7 @@ If you use this code or data, please cite our NeurIPS 2025 workshop paper:
 
 ---
 
-## 🛠️ Requirements
+## Requirements
 
 - Python ≥ 3.8
 - NumPy ≥ 1.20
@@ -224,19 +197,19 @@ See [`requirements.txt`](requirements.txt) for complete dependencies.
 
 ---
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👥 Authors
+## Authors
 
 - **Hesam Abouali** - University of Waterloo - hesam.abouali@uwaterloo.ca
-- **Sanjana Srikant** - University of Waterloo
-- **Nicole G. Barra** - McMaster University
-- **Ali Etemad** - Queen's University
-- **Jonathan D. Schertzer** - McMaster University
+- **Sanjana Srikant** - University of Waterloo - sanjana.srikant@uwaterloo.ca
+- **Nicole G. Barra** - McMaster University - barrang@mcmaster.ca
+- **Ali Etemad** - Queen's University - ali.etemad@queensu.ca
+- **Jonathan D. Schertzer** - McMaster University - schertze@mcmaster.ca
 - **Mahla Poudineh** - University of Waterloo - mahla.poudineh@uwaterloo.ca
 
 ---
@@ -247,7 +220,7 @@ This research was supported by the Canadian Institutes of Health Research (CIHR)
 
 ---
 
-## 📧 Contact
+## Contact
 
 For questions or collaboration inquiries:
 - **Hesam Abouali**: hesam.abouali@uwaterloo.ca
