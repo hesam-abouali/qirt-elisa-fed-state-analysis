@@ -21,6 +21,13 @@ This repository contains the complete analysis pipeline for classifying metaboli
 
 at **1-minute resolution** (15-fold improvement over conventional ELISA's 15-minute intervals).
 
+**ELISA**
+
+The conventional ELISA was used to cross-validate QIRT-ELISA at two time points of the experiment:
+
+- t = 0 min
+- t = 15 min
+
 ### Key Features
 
 - **184 physiologically-informed features** extracted from hormone time-series data
