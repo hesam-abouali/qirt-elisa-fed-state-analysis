@@ -241,11 +241,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-This research was supported by:
-- Canadian Institutes of Health Research (CIHR)
-- Natural Sciences and Engineering Research Council of Canada (NSERC)
+This research was supported by the Canadian Institutes of Health Research (CIHR) and the Natural Sciences and Engineering Research Council of Canada (NSERC).
 
 ---
 
