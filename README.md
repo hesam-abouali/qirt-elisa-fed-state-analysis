@@ -10,7 +10,7 @@ Code and data accompanying our paper accepted at **NeurIPS 2025 Workshop: Learni
 
 ---
 
-## 📖 Overview
+## Overview
 
 This repository contains the **complete analysis pipeline** for classifying metabolic phenotypes (healthy, pre-diabetic, and type 2 diabetic) using high-resolution QIRT-ELISA hormone measurements.
 
@@ -23,38 +23,17 @@ at **2.5-minute resolution** (6-fold improvement over conventional ELISA's 15-mi
 
 ### Key Features
 
-- ✅ **184 physiologically-informed features** extracted from hormone time-series
-- ✅ **Three-stage feature selection** pipeline (variance → correlation → F-test)
-- ✅ **Four machine learning models** (Logistic Regression, SVM, Random Forest, KNN)
-- ✅ **89% classification accuracy** with Leave-One-Out Cross-Validation
-- ✅ **Complete pipeline** from raw data to classification results
-- ✅ **Comprehensive documentation** with all metric definitions
+-  **184 physiologically-informed features** extracted from hormone time-series
+-  **Three-stage feature selection** pipeline (variance → correlation → F-test)
+-  **Four machine learning models** (Logistic Regression, SVM, Random Forest, KNN)
+-  **89% classification accuracy** with Leave-One-Out Cross-Validation
+-  **Complete pipeline** from raw data to classification results
+-  **Comprehensive documentation** with all metric definitions
+
 
 ---
 
-## 🗂️ Repository Structure
-
-```
-qirt-elisa-fed-state-analysis/
-├── README.md                          # This file
-├── LICENSE                            # MIT License
-├── requirements.txt                   # Python dependencies
-├── .gitignore                        # Git ignore rules
-├── QUICKSTART.md                     # 5-minute getting started guide
-├── GITHUB_SETUP.md                   # GitHub upload instructions
-├── data/
-│   ├── README.md                     # Data documentation
-│   ├── fed_state_raw.csv            # Raw QIRT-ELISA measurements (54 rows)
-│   └── comprehensive_metrics.csv     # Extracted features (9 animals × 184 features)
-└── src/
-    ├── feature_extraction.py         # Feature extraction pipeline (184 metrics)
-    ├── classification.py             # ML classification (4 models: LR, RF, SVM, KNN)
-    └── example_usage.py              # Basic usage examples
-```
-
----
-
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -131,7 +110,7 @@ results = classifier.run_complete_analysis(
 
 ---
 
-## 📊 Data Format
+## Data Format
 
 ### Input Data (fed_state_raw.csv)
 
@@ -161,7 +140,7 @@ results = classifier.run_complete_analysis(
 
 ---
 
-## 🧬 Feature Categories
+## Feature Categories
 
 The 184 features are organized into **10 categories** per hormone (insulin, C-peptide, glucagon):
 
@@ -181,7 +160,7 @@ The 184 features are organized into **10 categories** per hormone (insulin, C-pe
 
 ---
 
-## 🤖 Machine Learning Models
+## Machine Learning Models
 
 ### Feature Selection (Three-Stage Pipeline)
 
@@ -218,7 +197,7 @@ Ranked by Logistic Regression coefficients and F-scores:
 
 ---
 
-## 📈 Key Scientific Findings
+## Key Scientific Findings
 
 From our NeurIPS 2025 paper:
 
@@ -239,7 +218,7 @@ From our NeurIPS 2025 paper:
 
 ---
 
-## 📝 Citation
+## Citation
 
 If you use this code or data, please cite our paper:
 
@@ -287,34 +266,25 @@ If you use this code or data, please cite our paper:
 
 ---
 
-## 📧 Contact
+## Contact
 
 **Hesam Abouali**  
+[hesam.abouali@uwaterloo.ca]
 Department of Electrical & Computer Engineering  
-McMaster University, Hamilton, ON, Canada
+University of Waterloo, Waterloo, ON, Canada
 
-For questions about:
-- **Code**: Open an issue on GitHub
-- **Data**: Contact via email
-- **Collaboration**: Contact corresponding author
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-This work was supported by:
-- Canadian Institutes of Health Research (CIHR)
-- Natural Sciences and Engineering Research Council of Canada (NSERC)
+This work was supported by the Canadian Institutes of Health Research (CIHR) and the Natural Sciences and Engineering Research Council of Canada (NSERC).
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
 
-## 🌟 Star This Repository!
-
-If you find this work useful, please ⭐ star this repository and cite our paper!
 
