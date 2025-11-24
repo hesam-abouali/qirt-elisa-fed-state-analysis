@@ -78,8 +78,6 @@ This directory contains the experimental data from QIRT-ELISA fed-state experime
 10. **Peak Kinetics** (21 metrics)
     - Rise/decline times and rates for each biomarker
 
-See [`feature_dictionary.md`](feature_dictionary.md) for complete descriptions of all 184 features.
-
 ---
 
 ## Usage Example
