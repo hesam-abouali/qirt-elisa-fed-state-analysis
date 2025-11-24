@@ -82,15 +82,6 @@ See [`feature_dictionary.md`](feature_dictionary.md) for complete descriptions o
 
 ---
 
-## Data Privacy
-
-All data has been de-identified:
-- Animal IDs are anonymized codes
-- No traceable information included
-- Complies with institutional animal care protocols
-
----
-
 ## Usage Example
 
 ```python
