@@ -1,6 +1,4 @@
-# QIRT-ELISA Fed-State Analysis
-
-**Decoding Type 2 Diabetes Progression via Metabolic Hormone Time-Series**
+# Decoding Type 2 Diabetes Progression via Metabolic Hormone Time-Series - QIRT-ELISA Fed-State Analysis
 
 [![NeurIPS 2025](https://img.shields.io/badge/NeurIPS-2025-blue.svg)](https://neurips.cc/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
