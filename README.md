@@ -263,7 +263,11 @@ If you use this code or data, please cite our paper:
 
 **Hesam Abouali**  
 [hesam.abouali@uwaterloo.ca]
+Department of Electrical & Computer Engineering  
+University of Waterloo, Waterloo, ON, Canada
 
+**Mahla Poudineh**  
+[mahla.poudineh@uwaterloo.ca]
 Department of Electrical & Computer Engineering  
 University of Waterloo, Waterloo, ON, Canada
 
