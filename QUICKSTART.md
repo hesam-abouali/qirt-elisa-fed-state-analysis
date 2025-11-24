@@ -1,100 +1,149 @@
-# Quick Start Guide
+# QIRT-ELISA Fed-State Analysis - Quick Start Guide
 
-Get up and running with QIRT-ELISA analysis in 5 minutes!
+Get up and running in **5 minutes**!
 
-## 📥 Step 1: Clone Repository
+---
 
-```bash
-git clone https://github.com/YOUR_USERNAME/qirt-elisa-fed-state-analysis.git
-cd qirt-elisa-fed-state-analysis
-```
+## Step-by-Step Workflow
 
-## 🐍 Step 2: Install Dependencies
+### Step 1: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Or with conda:
-
-```bash
-conda create -n qirt python=3.8
-conda activate qirt
-pip install -r requirements.txt
-```
-
-## 🚀 Step 3: Run Example Analysis
-
-```bash
-python src/example_usage.py
-```
-
-This will:
-- Load the data from `data/fed_state_raw.csv`
-- Extract 184 features
-- Generate analysis reports
-- Save results to `results/` directory
-
-## 📊 Step 4: View Results
-
-Check the generated files:
-
-```bash
-ls results/basic_analysis/
-```
-
-You'll find:
-- `metrics.csv` - All 184 extracted features
-- `report.txt` - Statistical summary
-- Various plots showing hormone dynamics
-
-## 🔬 Step 5: Use in Your Own Analysis
+### Step 2: Extract Features
 
 ```python
 from src.feature_extraction import ComprehensiveFedStateAnalyzer
 
-# Initialize
 analyzer = ComprehensiveFedStateAnalyzer()
 
-# Load your data
-analyzer.load_csv_data('path/to/your/data.csv')
+# Extract 184 features from raw data
+results = analyzer.run_complete_analysis(
+    csv_path='data/fed_state_raw.csv',
+    save_plots_dir='results/features',
+    save_report_path='results/report.txt'
+)
 
-# Extract features
-for animal_id in analyzer.data['animal_id'].unique():
-    metrics = analyzer.calculate_comprehensive_metrics(animal_id)
-    print(f"Animal {animal_id}: {len(metrics)} metric categories")
-
-# Export for machine learning
-df = analyzer.export_metrics_to_csv('my_features.csv')
+# Export to CSV
+analyzer.export_metrics_to_csv('results/comprehensive_metrics.csv')
 ```
 
-## 📖 Next Steps
+### Step 3: Run Classification
 
-- Read the full [README.md](README.md) for detailed documentation
-- Check [data/README.md](data/README.md) for data format details
-- Explore [src/example_usage.py](src/example_usage.py) for more examples
-- Review the [NeurIPS paper](paper/) for methodology details
+```python
+from src.classification import EnhancedMultiModelClassifier
 
-## 🆘 Need Help?
+classifier = EnhancedMultiModelClassifier()
 
-**Common Issues:**
+# Train all 4 models
+results = classifier.run_complete_analysis(
+    csv_path='results/comprehensive_metrics.csv',
+    save_plot_path='results/classification.png',
+    export_csv=True
+)
+```
 
-1. **Import Error**: Make sure you're in the repository root directory
-2. **File Not Found**: Check that data files are in `data/` folder
-3. **Module Not Found**: Run `pip install -r requirements.txt`
+---
 
-**Still stuck?** Open an issue on GitHub or contact:
-- Hesam Abouali: hesam.abouali@uwaterloo.ca
+## Quick Classification (Using Pre-extracted Features)
 
-## 🎯 What's Next?
+If you want to skip feature extraction and just run classification:
 
-Once you're comfortable with the basics:
+```python
+from src.classification import EnhancedMultiModelClassifier
 
-1. **Modify for your data**: Adapt the analysis pipeline
-2. **Add new features**: Extend the feature extraction
-3. **Train ML models**: Use the extracted features for classification
-4. **Visualize results**: Create custom plots
-5. **Contribute**: Submit pull requests with improvements!
+classifier = EnhancedMultiModelClassifier()
+
+# Use the included comprehensive_metrics.csv
+results = classifier.run_complete_analysis(
+    csv_path='data/comprehensive_metrics.csv',
+    save_plot_path='results/classification.png',
+    export_csv=True
+)
+```
+
+---
+
+## View Results
+
+After running, check:
+
+```
+results/
+├── comprehensive_metrics.csv              # 184 features
+├── classification.png                     # Model comparison
+├── comprehensive_metrics_multimodel_results.csv
+├── comprehensive_metrics_model_summary.csv
+└── features/
+    ├── plots/                            # Time-series visualizations
+    └── report.txt                        # Feature extraction report
+```
+
+---
+
+## Expected Output
+
+You should see:
+
+```
+✓ Feature extraction complete!
+✓ 184 features extracted
+
+PERFORMANCE RANKING:
+1. Logistic Regression: CV=0.889
+2. SVM                : CV=0.889
+3. KNN                : CV=0.778
+4. Random Forest      : CV=0.556
+
+✓ SUCCESS: Analysis completed successfully!
+```
+
+---
+
+## Common Issues
+
+### Issue: ModuleNotFoundError
+
+**Solution:**
+```bash
+pip install -r requirements.txt
+```
+
+### Issue: File not found
+
+**Solution:** Make sure you're in the repository root directory:
+```bash
+cd qirt-elisa-fed-state-analysis
+ls  # Should see: data/, src/, README.md, etc.
+```
+
+### Issue: Import errors
+
+**Solution:** Add src to Python path:
+```python
+import sys
+sys.path.append('.')
+from src.feature_extraction import ComprehensiveFedStateAnalyzer
+```
+
+---
+
+## What's Next?
+
+1. **Explore the data**: Check `data/README.md` for detailed data documentation
+2. **Modify parameters**: Edit hyperparameters in the scripts
+3. **Custom analysis**: Use `src/example_usage.py` as a template
+4. **Read the paper**: See full methodology in our NeurIPS 2025 paper
+
+---
+
+## Need Help?
+
+- **Documentation**: See main [README.md](README.md)
+- **Issues**: Open an issue on GitHub
+- **Questions**: Contact the authors
 
 ---
 
