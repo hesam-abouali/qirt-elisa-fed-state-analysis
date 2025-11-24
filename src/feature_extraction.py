@@ -2166,63 +2166,63 @@ class ComprehensiveFedStateAnalyzer:
        
         # 1. Temporal Resolution Advantage
         lines.append("1. TEMPORAL RESOLUTION ADVANTAGE:")
-        lines.append(f" • {self.time_interval:.1f}-minute sampling captures {len(self.time_points)} datapoints")
-        lines.append(f" • Conventional 15-minute ELISA would capture only {int(self.experiment_duration/15)+1} datapoints")
-        lines.append(f" • QIRT-ELISA preserves {((len(self.time_points)-1)/(int(self.experiment_duration/15)))*100:.0f}% more temporal information")
+        lines.append(f" {self.time_interval:.1f}-minute sampling captures {len(self.time_points)} datapoints")
+        lines.append(f" Conventional 15-minute ELISA would capture only {int(self.experiment_duration/15)+1} datapoints")
+        lines.append(f" QIRT-ELISA preserves {((len(self.time_points)-1)/(int(self.experiment_duration/15)))*100:.0f}% more temporal information")
         lines.append("")
        
         # 2. Glucose Adjustment Impact
         lines.append("2. GLUCOSE ADJUSTMENT REVEALS DISEASE PATTERNS:")
         if summary_stats['glucose_ranges']:
-            lines.append(f" • Glucose range across animals: {summary_stats['glucose_ranges']['min']:.1f} - {summary_stats['glucose_ranges']['max']:.1f} mM")
-            lines.append(f" • Without glucose adjustment, cross-group comparisons would be confounded")
-            lines.append(f" • Glucose efficiency shows {summary_stats['efficiency_decline']:.0f}% decline from healthy to diabetic")
+            lines.append(f" Glucose range across animals: {summary_stats['glucose_ranges']['min']:.1f} - {summary_stats['glucose_ranges']['max']:.1f} mM")
+            lines.append(f" Without glucose adjustment, cross-group comparisons would be confounded")
+            lines.append(f" Glucose efficiency shows {summary_stats['efficiency_decline']:.0f}% decline from healthy to diabetic")
         lines.append("")
        
         # 3. Oscillatory Dynamics
         lines.append("3. OSCILLATORY DYNAMICS ASSESSMENT:")
         if summary_stats['oscillation_data']:
-            lines.append(f" • Average oscillation frequency: {summary_stats['oscillation_data']['mean_frequency']:.3f} events/min")
-            lines.append(f" • Peak detection identifies {summary_stats['oscillation_data']['mean_peaks']:.1f} ± {summary_stats['oscillation_data']['std_peaks']:.1f} peaks per animal")
-            lines.append(f" • Inter-biomarker correlations range: {summary_stats['correlation_range']['min']:.3f} to {summary_stats['correlation_range']['max']:.3f}")
+            lines.append(f" Average oscillation frequency: {summary_stats['oscillation_data']['mean_frequency']:.3f} events/min")
+            lines.append(f" Peak detection identifies {summary_stats['oscillation_data']['mean_peaks']:.1f} ± {summary_stats['oscillation_data']['std_peaks']:.1f} peaks per animal")
+            lines.append(f" Inter-biomarker correlations range: {summary_stats['correlation_range']['min']:.3f} to {summary_stats['correlation_range']['max']:.3f}")
         lines.append("")
        
         # 4. Disease Progression
         lines.append("4. DISEASE PROGRESSION CHARACTERIZATION:")
         if summary_stats['function_progression']:
-            lines.append(f" • Pancreatic function scores: {summary_stats['function_progression']}")
-            lines.append(f" • Demonstrates clear functional decline across disease stages")
-            lines.append(f" • Early dysfunction detection through efficiency metrics")
+            lines.append(f" Pancreatic function scores: {summary_stats['function_progression']}")
+            lines.append(f" Demonstrates clear functional decline across disease stages")
+            lines.append(f" Early dysfunction detection through efficiency metrics")
         lines.append("")
        
         # 5. ELISA Validation
         lines.append("5. ELISA VALIDATION AND QUANTITATIVE ANALYSIS:")
         if summary_stats['elisa_validation']:
-            lines.append(f" • Two-point ELISA calibration validates device measurements")
-            lines.append(f" • Mean calibration error: {summary_stats['elisa_validation']['mean_error']:.1f}%")
-            lines.append(f" • Enables quantitative concentration analysis in pM units")
+            lines.append(f" Two-point ELISA calibration validates device measurements")
+            lines.append(f" Mean calibration error: {summary_stats['elisa_validation']['mean_error']:.1f}%")
+            lines.append(f" Enables quantitative concentration analysis in pM units")
         else:
-            lines.append(" • Analysis performed on device measurements (F a.u.)")
-            lines.append(" • Relative comparisons valid through normalization")
+            lines.append(" Analysis performed on device measurements (F a.u.)")
+            lines.append(" Relative comparisons valid through normalization")
         lines.append("")
        
         # 6. Clinical Significance
         lines.append("6. CLINICAL AND RESEARCH SIGNIFICANCE:")
-        lines.append(" • Fed state analysis reveals baseline pancreatic dysfunction")
-        lines.append(" • Multi-analyte measurement enables systems-level assessment")
-        lines.append(" • High temporal resolution captures rapid regulatory responses")
-        lines.append(" • Glucose adjustment essential for meaningful disease comparisons")
-        lines.append(" • Early detection of pre-diabetic metabolic dysfunction")
+        lines.append(" Fed state analysis reveals baseline pancreatic dysfunction")
+        lines.append(" Multi-analyte measurement enables systems-level assessment")
+        lines.append(" High temporal resolution captures rapid regulatory responses")
+        lines.append(" Glucose adjustment essential for meaningful disease comparisons")
+        lines.append(" Early detection of pre-diabetic metabolic dysfunction")
         lines.append("")
        
         # 7. QIRT-ELISA Advantages
         lines.append("7. QIRT-ELISA vs CONVENTIONAL ELISA:")
-        lines.append(" ✓ 6× higher temporal resolution")
-        lines.append(" ✓ Real-time measurement (no sample processing)")
-        lines.append(" ✓ Simultaneous multi-analyte detection")
-        lines.append(" ✓ Preserves oscillatory dynamics information")
-        lines.append(" ✓ Enables comprehensive kinetic analysis")
-        lines.append(" ✓ Glucose adjustment methodology for cross-group comparisons")
+        lines.append(" 6× higher temporal resolution")
+        lines.append(" Real-time measurement (no sample processing)")
+        lines.append(" Simultaneous multi-analyte detection")
+        lines.append(" Preserves oscillatory dynamics information")
+        lines.append(" Enables comprehensive kinetic analysis")
+        lines.append(" Glucose adjustment methodology for cross-group comparisons")
         lines.append("")
        
         return lines
@@ -2333,14 +2333,14 @@ class ComprehensiveFedStateAnalyzer:
         print("COMPREHENSIVE FED STATE QIRT-ELISA ANALYSIS PIPELINE")
         print("=" * 100)
         print("Features:")
-        print("• 120+ individual metrics per animal")
-        print("• All glucose adjustment methodologies")
-        print("• Peak kinetics and dynamics analysis")
-        print("• Inter-biomarker correlation analysis")
-        print("• ELISA-validated quantitative metrics")
-        print("• Pancreatic cell functionality assessment")
-        print("• Comprehensive statistical comparisons")
-        print("• Publication-ready plots and reports")
+        print(" 120+ individual metrics per animal")
+        print(" All glucose adjustment methodologies")
+        print(" Peak kinetics and dynamics analysis")
+        print(" Inter-biomarker correlation analysis")
+        print(" ELISA-validated quantitative metrics")
+        print(" Pancreatic cell functionality assessment")
+        print(" Comprehensive statistical comparisons")
+        print(" Publication-ready plots and reports")
         print("=" * 100)
        
         # Step 1: Load data
@@ -2373,22 +2373,22 @@ class ComprehensiveFedStateAnalyzer:
         print("\n" + "=" * 100)
         print("COMPREHENSIVE ANALYSIS COMPLETE!")
         print("=" * 100)
-        print(f"✓ Analyzed {len(self.comprehensive_metrics)} animals")
-        print(f"✓ Generated {self._count_total_metrics()} metrics per animal")
-        print(f"✓ Created comprehensive visualization")
-        print(f"✓ Generated detailed scientific report")
+        print(f" Analyzed {len(self.comprehensive_metrics)} animals")
+        print(f" Generated {self._count_total_metrics()} metrics per animal")
+        print(f" Created comprehensive visualization")
+        print(f" Generated detailed scientific report")
        
         if save_plots_dir:
-            print(f"✓ Plots saved to: {save_plots_dir}")
+            print(f" Plots saved to: {save_plots_dir}")
         if save_report_path:
-            print(f"✓ Report saved to: {save_report_path}")
+            print(f" Report saved to: {save_report_path}")
        
         print("\nScientific Justification Achieved:")
-        print("• Glucose adjustment reveals disease patterns invisible to conventional analysis")
-        print("• High temporal resolution captures oscillatory dynamics")
-        print("• Multi-analyte measurement enables systems-level pancreatic assessment")
-        print("• ELISA validation provides quantitative concentration analysis")
-        print("• Early detection of pre-diabetic dysfunction through efficiency metrics")
+        print(" Glucose adjustment reveals disease patterns invisible to conventional analysis")
+        print(" High temporal resolution captures oscillatory dynamics")
+        print(" Multi-analyte measurement enables systems-level pancreatic assessment")
+        print(" ELISA validation provides quantitative concentration analysis")
+        print(" Early detection of pre-diabetic dysfunction through efficiency metrics")
        
         return self.comprehensive_metrics
 
@@ -2573,8 +2573,8 @@ class ComprehensiveFedStateAnalyzer:
         # Save to CSV
         df.to_csv(csv_path, index=False)
        
-        print(f"✓ Exported {len(df)} animals with {len(df.columns)} metrics to: {csv_path}")
-        print(f"✓ Columns include:")
+        print(f" Exported {len(df)} animals with {len(df.columns)} metrics to: {csv_path}")
+        print(f" Columns include:")
         print(f" - Basic info: {len(basic_cols)} columns")
         print(f" - Device measurements: {len([c for c in df.columns if '_basic_' in c])} columns")
         print(f" - Glucose-adjusted: {len([c for c in df.columns if '_glucose_' in c])} columns")
@@ -2611,13 +2611,13 @@ def main():
         # Export calculated metrics to CSV
         analyzer.export_metrics_to_csv('fed_state_analysis_results/comprehensive_metrics.csv')
        
-        print("\n🎉 SUCCESS: Comprehensive Fed State Analysis Complete!")
-        print(f"📊 Generated analysis for {len(results)} animals")
-        print(f"📈 All plots and reports saved")
-        print(f"🔬 Scientific justification for QIRT-ELISA demonstrated")
+        print("\n SUCCESS: Comprehensive Fed State Analysis Complete!")
+        print(f" Generated analysis for {len(results)} animals")
+        print(f" All plots and reports saved")
+        print(f" Scientific justification for QIRT-ELISA demonstrated")
        
     except Exception as e:
-        print(f"\n❌ ERROR: {e}")
+        print(f"\n ERROR: {e}")
         print("Please check your CSV file path and format.")
 if __name__ == "__main__":
     main()
