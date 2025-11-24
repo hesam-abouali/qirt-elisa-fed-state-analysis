@@ -6,30 +6,27 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Code and data accompanying our paper accepted at **NeurIPS 2025 Workshop: Learning from Time Series for Health (TS4H)**.
+Code and the experimental _in vivo_ data accompanying the accepted paper, Decoding Type 2 Diabetes Progression via Metabolic Hormone Time-Series at **NeurIPS 2025 Workshop: Learning from Time Series for Health (TS4H)**.
 
 ---
 
 ## Overview
 
-This repository contains the **complete analysis pipeline** for classifying metabolic phenotypes (healthy, pre-diabetic, and type 2 diabetic) using high-resolution QIRT-ELISA hormone measurements.
+This repository contains the **complete feature extraction** and **classification pipeline** for classifying metabolic phenotypes (healthy, pre-diabetic, and type 2 diabetic) of animal models using high-resolution QIRT-ELISA hormone measurements.
 
 **QIRT-ELISA** (Quantum dot–Integrated Real-Time ELISA) enables continuous, multiplexed monitoring of:
 - **Insulin**
 - **Glucagon**  
 - **C-peptide**
 
-at **2.5-minute resolution** (6-fold improvement over conventional ELISA's 15-minute sampling intervals).
+at **1-minute resolution** (15-fold improvement over conventional ELISA's 15-minute sampling intervals).
 
 ### Key Features
 
 -  **184 physiologically-informed features** extracted from hormone time-series
--  **Three-stage feature selection** pipeline (variance → correlation → F-test)
--  **Four machine learning models** (Logistic Regression, SVM, Random Forest, KNN)
+-  **Three-stage feature selection and filteration** pipeline (variance → correlation → F-test)
+-  **Four classical machine learning models** (Logistic Regression, SVM, Random Forest, KNN)
 -  **89% classification accuracy** with Leave-One-Out Cross-Validation
--  **Complete pipeline** from raw data to classification results
--  **Comprehensive documentation** with all metric definitions
-
 
 ---
 
@@ -193,13 +190,11 @@ Ranked by Logistic Regression coefficients and F-scores:
 | **Random Forest** | 89% | 56% | 0.33 |
 | **KNN (k=3)** | 89% | 78% | 0.11 |
 
-**Key Finding**: Logistic Regression and SVM achieve best performance with excellent generalization (low overfitting).
+**Key Finding**: Logistic Regression and SVM achieve best performance.
 
 ---
 
 ## Key Scientific Findings
-
-From our NeurIPS 2025 paper:
 
 1. **α-cell dysfunction precedes β-cell failure** in T2D progression
    - Glucagon kinetics are the primary discriminator (6 of top 15 features)
@@ -250,7 +245,7 @@ If you use this code or data, please cite our paper:
 
 ---
 
-## 🔬 Experimental Details
+## Experimental Details
 
 **Animal Models:**
 - **Healthy**: Lean Zucker rats (n=3)
