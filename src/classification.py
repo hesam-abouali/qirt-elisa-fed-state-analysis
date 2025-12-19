@@ -1326,10 +1326,7 @@ if __name__ == "__main__":
         
         if results:
             print("\n[SUCCESS] Multi-model analysis completed successfully!")
-            print("All four models trained and compared")
-            print("Enhanced visualization created")
             print("Comprehensive results exported")
-            print("Ready for publication and grant applications")
             
             # Print key insights
             best_model = max(results['model_results'].keys(), 
@@ -1339,9 +1336,6 @@ if __name__ == "__main__":
             print(f"\nKEY INSIGHTS:")
             print(f"   • Best performing model: {best_model}")
             print(f"   • Best CV accuracy: {best_acc:.3f}")
-            print(f"   • All models use identical feature set")
-            print(f"   • Comprehensive overfitting analysis included")
-            print(f"   • Decision boundary comparison available")
             
         else:
             print("\n[ERROR] Analysis failed - check error messages above")
