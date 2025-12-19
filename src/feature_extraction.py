@@ -2376,19 +2376,15 @@ class ComprehensiveFedStateAnalyzer:
         print(f" Analyzed {len(self.comprehensive_metrics)} animals")
         print(f" Generated {self._count_total_metrics()} metrics per animal")
         print(f" Created comprehensive visualization")
-        print(f" Generated detailed scientific report")
        
         if save_plots_dir:
             print(f" Plots saved to: {save_plots_dir}")
         if save_report_path:
             print(f" Report saved to: {save_report_path}")
        
-        print("\nScientific Justification Achieved:")
         print(" Glucose adjustment reveals disease patterns invisible to conventional analysis")
         print(" High temporal resolution captures oscillatory dynamics")
-        print(" Multi-analyte measurement enables systems-level pancreatic assessment")
-        print(" ELISA validation provides quantitative concentration analysis")
-        print(" Early detection of pre-diabetic dysfunction through efficiency metrics")
+
        
         return self.comprehensive_metrics
 
@@ -2613,8 +2609,6 @@ def main():
        
         print("\n SUCCESS: Comprehensive Fed State Analysis Complete!")
         print(f" Generated analysis for {len(results)} animals")
-        print(f" All plots and reports saved")
-        print(f" Scientific justification for QIRT-ELISA demonstrated")
        
     except Exception as e:
         print(f"\n ERROR: {e}")
